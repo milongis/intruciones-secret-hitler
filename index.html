@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo se juega a «Secret Hitler» — Guía completa de reglas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper-bg: #F4EFE6;
+      --paper-card: #FAF7F0;
+      --paper-border: #D6CCB8;
+      --ink-dark: #1E1C1A;
+      --ink-muted: #57524A;
+      --liberal-blue: #235D8C;
+      --liberal-light: #E4EEF5;
+      --fascist-red: #B22222;
+      --fascist-light: #F8E5E5;
+      --gold-accent: #B8860B;
+    }
+
+    body {
+      background-color: var(--paper-bg);
+      color: var(--ink-dark);
+      font-family: 'Inter', sans-serif;
+      background-image: 
+        radial-gradient(rgba(160, 148, 128, 0.14) 1px, transparent 0),
+        radial-gradient(rgba(160, 148, 128, 0.1) 1px, transparent 0);
+      background-size: 28px 28px;
+      background-position: 0 0, 14px 14px;
+    }
+
+    .font-display {
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.03em;
+    }
+
+    .font-typewriter {
+      font-family: 'Courier Prime', monospace;
+    }
+
+    .dossier-card {
+      background-color: var(--paper-card);
+      border: 2px solid var(--paper-border);
+      box-shadow: 4px 4px 0px rgba(30, 28, 26, 0.08);
+    }
+
+    .stamp-badge {
+      border: 2px solid currentColor;
+      transform: rotate(-2deg);
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.08em;
+    }
+
+    /* Barra de desplazamiento personalizada */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #E8E0D0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #9E9381;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7A7060;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#B22222] selection:text-white">
+
+  <!-- Encabezado principal estilo expediente Weimar 1932 -->
+  <header class="border-b-4 border-[#1E1C1A] bg-[#EAE2D3] pt-8 pb-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+        <span class="inline-block bg-[#1E1C1A] text-[#F4EFE6] font-typewriter text-xs sm:text-sm px-3 py-1 rounded tracking-widest uppercase">
+          Archivo Legislativo • Berlín, 1932
+        </span>
+        <span class="stamp-badge text-[#B22222] text-xs sm:text-sm font-bold px-3 py-0.5 rounded uppercase">
+          Reglamento Oficial Completo
+        </span>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold uppercase text-[#1E1C1A] leading-tight">
+        Cómo se juega a <span class="text-[#B22222]">«Secret Hitler»</span>
+      </h1>
+      <p class="mt-3 text-base sm:text-lg text-[#57524A] max-w-3xl leading-relaxed">
+        Juego de deducción social e intriga política ambientado en la Alemania de 1932. Un grupo de políticos liberales intenta promulgar leyes progresistas mientras varios fascistas infiltrados conspiran para instalar a Hitler en la Cancillería.
+      </p>
+
+      <!-- Ficha rápida -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-8">
+        <div class="bg-[#FAF7F0] border-2 border-[#1E1C1A] rounded-lg p-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#235D8C] text-white flex items-center justify-center shrink-0 font-display font-bold text-lg">
+            5-10
+          </div>
+          <div>
+            <div class="text-xs uppercase font-typewriter text-[#57524A]">Jugadores</div>
+            <div class="font-bold text-sm sm:text-base">5 a 10 personas</div>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF7F0] border-2 border-[#1E1C1A] rounded-lg p-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#B22222] text-white flex items-center justify-center shrink-0 font-display font-bold text-lg">
+            17+
+          </div>
+          <div>
+            <div class="text-xs uppercase font-typewriter text-[#57524A]">Edad</div>
+            <div class="font-bold text-sm sm:text-base">A partir de 17 años</div>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF7F0] border-2 border-[#1E1C1A] rounded-lg p-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#1E1C1A] text-[#F4EFE6] flex items-center justify-center shrink-0 font-display font-bold text-lg">
+            2
+          </div>
+          <div>
+            <div class="text-xs uppercase font-typewriter text-[#57524A]">Bandos</div>
+            <div class="font-bold text-sm sm:text-base">Liberales vs Fascistas</div>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF7F0] border-2 border-[#1E1C1A] rounded-lg p-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#B8860B] text-white flex items-center justify-center shrink-0 font-display font-bold text-sm">
+            45'
+          </div>
+          <div>
+            <div class="text-xs uppercase font-typewriter text-[#57524A]">Duración</div>
+            <div class="font-bold text-sm sm:text-base">40 – 50 minutos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor principal con Índice lateral y Contenido -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-start">
+
+      <!-- Índice / Tabla de contenidos interactiva -->
+      <aside class="lg:col-span-3 mb-8 lg:mb-0 lg:sticky lg:top-6">
+        <nav aria-label="Tabla de contenidos" class="dossier-card rounded-xl p-4 sm:p-5">
+          <div class="flex items-center justify-between border-b-2 border-[#D6CCB8] pb-2.5 mb-3">
+            <h2 class="font-display uppercase text-lg font-bold tracking-wider text-[#1E1C1A]">
+              Índice de Reglas
+            </h2>
+            <span class="font-typewriter text-xs text-[#57524A]">§ 1–8</span>
+          </div>
+          <ul class="space-y-1.5 text-sm" id="toc-list">
+            <li>
+              <a href="#antes-de-empezar" class="toc-link block px-3 py-2 rounded-lg font-medium text-[#57524A] hover:bg-[#EAE2D3] hover:text-[#1E1C1A] transition-colors">
+                1. Antes de empezar a jugar
+              </a>
+            </li>
+            <li>
+              <a href="#elementos-del-juego" class="toc-link block px-3 py-2 rounded-lg font-medium text-[#57524A] hover:bg-[#EAE2D3] hover:text-[#1E1C1A] transition-colors">
+                2. Elementos del juego
+              </a>
+            </li>
+            <li>
+              <a href="#objetivo-del-juego" class="toc-link block px-3 py-2 rounded-lg font-medium text-[#57524A] hover:bg-[#EAE2D3] hover:text-[#1E1C1A] transition-colors">
+                3. Objetivo del juego
+              </a>
+            </li>
+            <li>
+              <a href="#preparacion" class="toc-link block px-3 py-2 rounded-lg font-medium text-[#57524A] hover:bg-[#EAE2D3] hover:text-[#1E1C1A] transition-colors">
+                4. Preparación y reparto
+              </a>
+            </li>
+            <li>
+              <a href="#asignacion-roles" class="toc-link block px-3 py-2 rounded-lg font-medium text-[#57524A] hover:bg-[#EAE2D3] hover:text-[#1E1C1A] transition-colors">
+                5. Asignación y protocolo secreto
+              </a>
+            </li>
+            <li>
+              <a href="#desarrollo-ronda" class="toc-link block px-3 py-2 rounded-lg font-medium text-[#57524A] hover:bg-[#EAE2D3] hover:text-[#1E1C1A] transition-colors">
+                6. Así se juega una ronda
+              </a>
+            </li>
+            <li>
+              <a href="#aprobacion-ley" class="toc-link block px-3 py-2 rounded-lg font-medium text-[#57524A] hover:bg-[#EAE2D3] hover:text-[#1E1C1A] transition-colors">
+                7. Aprobación de una ley y poderes
+              </a>
+            </li>
+            <li>
+              <a href="#fin-partida" class="toc-link block px-3 py-2 rounded-lg font-medium text-[#57524A] hover:bg-[#EAE2D3] hover:text-[#1E1C1A] transition-colors">
+                8. Fin de la partida
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Contenido principal de reglas -->
+      <main class="lg:col-span-9 space-y-10">
+
+        <!-- SECCIÓN 1: ANTES DE EMPEZAR -->
+        <section id="antes-de-empezar" class="dossier-card rounded-xl p-6 sm:p-8 scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-[#1E1C1A] pb-3 mb-6">
+            <span class="bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold px-2.5 py-0.5 rounded text-sm">01</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase">Antes de empezar a jugar</h2>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-5">
+              <h3 class="font-display text-lg font-bold uppercase text-[#235D8C] mb-2">Jugadores</h3>
+              <p class="text-sm sm:text-base leading-relaxed">
+                <strong>Secret Hitler</strong> está diseñado para grupos de entre <strong>5 y 10 jugadores</strong>, recomendándose una edad mínima de <strong>17 años</strong> debido a su temática política, engaño y deducción social.
+              </p>
+            </div>
+            <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-5">
+              <h3 class="font-display text-lg font-bold uppercase text-[#B22222] mb-2">Qué necesitáis para jugar</h3>
+              <p class="text-sm sm:text-base leading-relaxed">
+                Los componentes oficiales del juego: sobres secretos, cartas de rol oculto, carnets de afiliación a partidos, rótulos de Presidente y Canciller, papeletas de voto (<em>Ja!</em> / <em>Nein!</em>), cartas de leyes y tableros reversibles.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 2: ELEMENTOS DEL JUEGO -->
+        <section id="elementos-del-juego" class="dossier-card rounded-xl p-6 sm:p-8 scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-[#1E1C1A] pb-3 mb-6">
+            <span class="bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold px-2.5 py-0.5 rounded text-sm">02</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase">Elementos del juego</h2>
+          </div>
+
+          <!-- Cartas de roles ocultos -->
+          <div class="mb-8">
+            <h3 class="font-display text-xl font-bold uppercase mb-3">Cartas de roles ocultos</h3>
+            <p class="text-sm sm:text-base leading-relaxed mb-4">
+              Secret Hitler es un juego de identidad secreta. Al comenzar la partida, cada participante recibe en secreto una carta que determina su bando y objetivo:
+            </p>
+            <ul class="space-y-2 text-sm sm:text-base mb-6 list-disc pl-5">
+              <li><strong class="text-[#235D8C]">Cartas de «Liberales»:</strong> Quien recibe esta carta pertenece al bando <strong>LIBERAL</strong> (son mayoría en la mesa, pero no se conocen entre sí).</li>
+              <li><strong class="text-[#B22222]">Cartas de «Fascistas»:</strong> Quien recibe esta carta es un infiltrado <strong>FASCISTA</strong> cuyo deber es sabotear las leyes progresistas y proteger a Hitler.</li>
+              <li><strong class="text-[#1E1C1A]">Carta de «Hitler»:</strong> Quien recibe esta carta es el <strong>SECRET HITLER</strong>. Pertenece al equipo fascista pero debe aparentar ser un liberal moderado.</li>
+            </ul>
+
+            <!-- Ilustraciones SVG de Cartas de Roles -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <!-- Carta Liberal -->
+              <figure class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-4 flex flex-col items-center text-center">
+                  <img alt="" src="data:image/jpg;base64,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" />
+               <!-- <svg viewBox="0 0 180 250" class="w-36 h-auto drop-shadow-md rounded-lg" role="img" aria-label="Carta de rol Liberal">
+                  <rect x="4" y="4" width="172" height="242" rx="12" fill="#E4EEF5" stroke="#235D8C" stroke-width="5"/>
+                  <rect x="14" y="14" width="152" height="222" rx="8" fill="none" stroke="#235D8C" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <!-- Emblema Paloma estilizada
+                  <circle cx="90" cy="95" r="44" fill="#235D8C"/>
+                  <path d="M68 102 C75 82, 102 74, 118 84 C108 92, 106 105, 114 114 C96 112, 82 115, 68 102 Z" fill="#FAF7F0"/>
+                  <path d="M84 88 L72 72 L94 82 Z" fill="#FAF7F0"/>
+                  <circle cx="107" cy="86" r="2.2" fill="#235D8C"/> -->
+                  <!-- Banda inferior -->
+                  <rect x="22" y="165" width="136" height="44" rx="4" fill="#235D8C"/>
+                  <text x="90" y="194" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-weight="700" font-size="22" letter-spacing="2">LIBERAL</text>
+                  <text x="90" y="224" text-anchor="middle" fill="#235D8C" font-family="Courier Prime, monospace" font-size="9" font-weight="bold">ROL SECRETO</text>
+                </svg>
+                <figcaption class="mt-3 text-xs font-typewriter text-[#57524A]">
+                  Juego Secret Hitler, carta de <strong>LIBERAL</strong>
+                </figcaption>
+              </figure>
+
+              <!-- Carta Fascista -->
+              <figure class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-4 flex flex-col items-center text-center">
+                <svg viewBox="0 0 180 250" class="w-36 h-auto drop-shadow-md rounded-lg" role="img" aria-label="Carta de rol Fascista">
+                  <rect x="4" y="4" width="172" height="242" rx="12" fill="#F8E5E5" stroke="#B22222" stroke-width="5"/>
+                  <rect x="14" y="14" width="152" height="222" rx="8" fill="none" stroke="#B22222" stroke-width="1.5" stroke-dasharray="4 3"/>
+                  <!-- Emblema Lagarto / Cráneo geométrico -->
+                  <circle cx="90" cy="95" r="44" fill="#B22222"/>
+                  <polygon points="90,62 118,95 90,128 62,95" fill="#1E1C1A"/>
+                  <circle cx="90" cy="95" r="14" fill="#FAF7F0"/>
+                  <path d="M82 95 L98 95 M90 87 L90 103" stroke="#B22222" stroke-width="4"/>
+                  <!-- Banda inferior -->
+                  <rect x="22" y="165" width="136" height="44" rx="4" fill="#B22222"/>
+                  <text x="90" y="194" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-weight="700" font-size="22" letter-spacing="2">FASCIST</text>
+                  <text x="90" y="224" text-anchor="middle" fill="#B22222" font-family="Courier Prime, monospace" font-size="9" font-weight="bold">ROL SECRETO</text>
+                </svg>
+                <figcaption class="mt-3 text-xs font-typewriter text-[#57524A]">
+                  Juego Secret Hitler, carta de <strong>FASCISTA</strong>
+                </figcaption>
+              </figure>
+
+              <!-- Carta Hitler -->
+              <figure class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-4 flex flex-col items-center text-center">
+                <svg viewBox="0 0 180 250" class="w-36 h-auto drop-shadow-md rounded-lg" role="img" aria-label="Carta de rol Secret Hitler">
+                  <rect x="4" y="4" width="172" height="242" rx="12" fill="#2A2623" stroke="#B22222" stroke-width="5"/>
+                  <rect x="14" y="14" width="152" height="222" rx="8" fill="none" stroke="#B8860B" stroke-width="1.5"/>
+                  <!-- Silueta estilizada -->
+                  <circle cx="90" cy="95" r="44" fill="#B22222" stroke="#FAF7F0" stroke-width="2"/>
+                  <circle cx="90" cy="84" r="16" fill="#FAF7F0"/>
+                  <path d="M76 74 Q90 64 104 74 L102 79 L78 79 Z" fill="#1E1C1A"/>
+                  <rect x="85" y="91" width="10" height="4" fill="#1E1C1A"/>
+                  <path d="M64 126 C64 108, 116 108, 116 126 Z" fill="#1E1C1A"/>
+                  <!-- Banda inferior -->
+                  <rect x="22" y="165" width="136" height="44" rx="4" fill="#1E1C1A" stroke="#B22222" stroke-width="2"/>
+                  <text x="90" y="194" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-weight="700" font-size="22" letter-spacing="2">HITLER</text>
+                  <text x="90" y="224" text-anchor="middle" fill="#B8860B" font-family="Courier Prime, monospace" font-size="9" font-weight="bold">SECRET HITLER</text>
+                </svg>
+                <figcaption class="mt-3 text-xs font-typewriter text-[#57524A]">
+                  Juego Secret Hitler, carta de <strong>HITLER</strong>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Carnet de afiliación -->
+          <div class="border-t border-[#D6CCB8] pt-6 mb-8">
+            <div class="grid md:grid-cols-12 gap-6 items-center">
+              <div class="md:col-span-7">
+                <h3 class="font-display text-xl font-bold uppercase mb-2">Carnet de afiliación</h3>
+                <p class="text-sm sm:text-base leading-relaxed mb-3">
+                  Además de la carta con su rol oculto, cada jugador recibe un <strong>carnet de afiliación a su partido</strong>:
+                </p>
+                <ul class="space-y-1.5 text-sm sm:text-base list-disc pl-5 mb-3">
+                  <li>Los <strong>liberales</strong> reciben el carnet del <strong>Partido Liberal</strong>.</li>
+                  <li>Tanto los <strong>fascistas</strong> como <strong>Hitler</strong> reciben el carnet del <strong>Partido Fascista</strong>.</li>
+                </ul>
+                <div class="bg-[#FFF9E6] border-l-4 border-[#B8860B] p-3 rounded-r-lg text-xs sm:text-sm text-[#57524A]">
+                  <strong>¿Por qué existen dos cartas?</strong> Cuando un poder presidencial permite investigar la afiliación de un jugador, este muestra su <em>carnet de partido</em> y no su rol exacto; así Hitler puede ser descubierto como fascista sin revelar directamente que es Hitler.
+                </div>
+              </div>
+
+              <!-- Ilustración SVG Carnets de afiliación -->
+              <figure class="md:col-span-5 bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-4 flex flex-col items-center">
+                <svg viewBox="0 0 260 150" class="w-full max-w-[250px] h-auto" role="img" aria-label="Carnets de afiliación Liberal y Fascista">
+                  <!-- Carnet Liberal -->
+                  <g transform="translate(8, 12) rotate(-4)">
+                    <rect x="0" y="0" width="115" height="125" rx="8" fill="#235D8C" stroke="#1E1C1A" stroke-width="2.5"/>
+                    <rect x="8" y="8" width="99" height="109" rx="5" fill="none" stroke="#E4EEF5" stroke-width="1"/>
+                    <text x="57" y="30" text-anchor="middle" fill="#E4EEF5" font-family="Courier Prime, monospace" font-size="8">AFILIACIÓN</text>
+                    <circle cx="57" cy="64" r="22" fill="#E4EEF5"/>
+                    <path d="M46 68 C50 56, 64 52, 72 58 C66 63, 65 70, 69 75 C59 74, 52 75, 46 68 Z" fill="#235D8C"/>
+                    <text x="57" y="106" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-size="13" font-weight="bold" letter-spacing="1">LIBERAL</text>
+                  </g>
+                  <!-- Carnet Fascista -->
+                  <g transform="translate(132, 16) rotate(4)">
+                    <rect x="0" y="0" width="115" height="125" rx="8" fill="#B22222" stroke="#1E1C1A" stroke-width="2.5"/>
+                    <rect x="8" y="8" width="99" height="109" rx="5" fill="none" stroke="#F8E5E5" stroke-width="1"/>
+                    <text x="57" y="30" text-anchor="middle" fill="#F8E5E5" font-family="Courier Prime, monospace" font-size="8">AFILIACIÓN</text>
+                    <circle cx="57" cy="64" r="22" fill="#1E1C1A"/>
+                    <polygon points="57,48 72,64 57,80 42,64" fill="#F8E5E5"/>
+                    <text x="57" y="106" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-size="13" font-weight="bold" letter-spacing="1">FASCISTA</text>
+                  </g>
+                </svg>
+                <figcaption class="mt-2 text-xs font-typewriter text-center text-[#57524A]">
+                  Carnets de afiliación: Partido Liberal y Partido Fascista
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Presidente, Canciller y Papeletas de voto -->
+          <div class="border-t border-[#D6CCB8] pt-6 mb-8">
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <h3 class="font-display text-lg font-bold uppercase mb-1.5">Presidente del Parlamento</h3>
+                <p class="text-sm leading-relaxed text-[#57524A]">
+                  En cada ronda un jugador asume el cargo de <strong>PRESIDENTE</strong> (rotando en sentido horario) y coloca frente a sí el rótulo oficial de madera que le identifica. Propone al candidato a Canciller y dirige la votación.
+                </p>
+              </div>
+              <div>
+                <h3 class="font-display text-lg font-bold uppercase mb-1.5">Canciller de Alemania</h3>
+                <p class="text-sm leading-relaxed text-[#57524A]">
+                  Segundo cargo ejecutivo de la ronda. El candidato propuesto por el Presidente recibe el rótulo de <strong>CANCILLER</strong> y, si supera la votación parlamentaria, promulga una de las leyes recibidas.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ilustración SVG Rótulos y Papeletas de voto -->
+            <div class="grid sm:grid-cols-2 gap-5">
+              <figure class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-4 flex flex-col items-center justify-center">
+                <svg viewBox="0 0 280 120" class="w-full max-w-[270px] h-auto" role="img" aria-label="Rótulos de Presidente y Canciller">
+                  <!-- Rótulo Presidente -->
+                  <rect x="20" y="14" width="240" height="38" rx="6" fill="#C9A66B" stroke="#4A3519" stroke-width="3"/>
+                  <rect x="26" y="20" width="228" height="26" rx="3" fill="#1E1C1A"/>
+                  <text x="140" y="38" text-anchor="middle" fill="#F4EFE6" font-family="Oswald, sans-serif" font-weight="700" font-size="16" letter-spacing="3">PRESIDENTE</text>
+                  <!-- Rótulo Canciller -->
+                  <rect x="20" y="68" width="240" height="38" rx="6" fill="#C9A66B" stroke="#4A3519" stroke-width="3"/>
+                  <rect x="26" y="74" width="228" height="26" rx="3" fill="#3D2B1F"/>
+                  <text x="140" y="92" text-anchor="middle" fill="#F4EFE6" font-family="Oswald, sans-serif" font-weight="700" font-size="16" letter-spacing="3">CANCILLER</text>
+                </svg>
+                <figcaption class="mt-2 text-xs font-typewriter text-center text-[#57524A]">
+                  Rótulos identificativos de Presidente y Canciller
+                </figcaption>
+              </figure>
+
+              <figure class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-4 flex flex-col items-center justify-center">
+                <svg viewBox="0 0 260 120" class="w-full max-w-[240px] h-auto" role="img" aria-label="Papeletas de voto Ja! y Nein!">
+                  <!-- Papeleta JA! -->
+                  <g transform="translate(24, 10) rotate(-3)">
+                    <rect x="0" y="0" width="95" height="100" rx="8" fill="#FAF7F0" stroke="#1E1C1A" stroke-width="2.5"/>
+                    <rect x="8" y="8" width="79" height="84" rx="4" fill="none" stroke="#235D8C" stroke-width="1.5"/>
+                    <text x="47" y="54" text-anchor="middle" fill="#235D8C" font-family="Oswald, sans-serif" font-weight="700" font-size="28">JA!</text>
+                    <text x="47" y="76" text-anchor="middle" fill="#1E1C1A" font-family="Courier Prime, monospace" font-size="11" font-weight="bold">(SÍ)</text>
+                  </g>
+                  <!-- Papeleta NEIN! -->
+                  <g transform="translate(140, 10) rotate(3)">
+                    <rect x="0" y="0" width="95" height="100" rx="8" fill="#1E1C1A" stroke="#1E1C1A" stroke-width="2.5"/>
+                    <rect x="8" y="8" width="79" height="84" rx="4" fill="none" stroke="#B22222" stroke-width="1.5"/>
+                    <text x="47" y="54" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-weight="700" font-size="26">NEIN!</text>
+                    <text x="47" y="76" text-anchor="middle" fill="#B22222" font-family="Courier Prime, monospace" font-size="11" font-weight="bold">(NO)</text>
+                  </g>
+                </svg>
+                <figcaption class="mt-2 text-xs font-typewriter text-center text-[#57524A]">
+                  Papeletas secretas de votación: 10 de <strong>JA! (SÍ)</strong> y 10 de <strong>NEIN! (NO)</strong>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Cartas de leyes y Tableros -->
+          <div class="border-t border-[#D6CCB8] pt-6">
+            <h3 class="font-display text-xl font-bold uppercase mb-2">Cartas de leyes y Tableros de control</h3>
+            <p class="text-sm sm:text-base leading-relaxed mb-4">
+              El mazo legislativo contiene <strong>17 cartas de leyes</strong>: <strong>6 leyes liberales</strong> (azules) y <strong>11 leyes fascistas</strong> (rojas). Al haber más leyes fascistas en el mazo, los liberales deben deducir quién miente sobre las cartas robadas.
+            </p>
+            <p class="text-sm sm:text-base leading-relaxed mb-6">
+              Los tableros son reversibles: por un lado son <strong>azules</strong> (tablero liberal con 5 espacios y el <em>track</em> de elecciones fallidas) y por el otro son <strong>rojos</strong> (tablero fascista con 6 espacios adaptado al número de jugadores: 5–6, 7–8 o 9–10).
+            </p>
+
+            <!-- Ilustración SVG Tableros y Cartas de Ley -->
+            <figure class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-xl p-4 sm:p-6">
+              <svg viewBox="0 0 640 270" class="w-full h-auto" role="img" aria-label="Tablero Liberal azul, Tablero Fascista rojo y Cartas de Ley">
+                <!-- Tablero Liberal (Azul) -->
+                <g transform="translate(15, 12)">
+                  <rect x="0" y="0" width="430" height="112" rx="8" fill="#235D8C" stroke="#1E1C1A" stroke-width="2.5"/>
+                  <text x="215" y="20" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-size="12" letter-spacing="2">TABLERO LIBERAL (5 LEYES PARA GANAR)</text>
+                  <!-- 5 casillas de leyes liberales -->
+                  <rect x="35" y="28" width="62" height="52" rx="4" fill="#E4EEF5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <rect x="109" y="28" width="62" height="52" rx="4" fill="#E4EEF5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <rect x="183" y="28" width="62" height="52" rx="4" fill="#E4EEF5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <rect x="257" y="28" width="62" height="52" rx="4" fill="#E4EEF5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <rect x="331" y="28" width="62" height="52" rx="4" fill="#B8860B" stroke="#FAF7F0" stroke-width="2"/>
+                  <text x="362" y="58" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-size="11" font-weight="bold">VICTORIA</text>
+                  <!-- Track de gobiernos fallidos -->
+                  <text x="85" y="99" fill="#E4EEF5" font-family="Courier Prime, monospace" font-size="9">TRACK ELECCIONES FALLIDAS:</text>
+                  <circle cx="245" cy="96" r="8" fill="#FAF7F0" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <text x="245" y="99" text-anchor="middle" fill="#1E1C1A" font-size="9" font-weight="bold">0</text>
+                  <circle cx="275" cy="96" r="8" fill="#E4EEF5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <text x="275" y="99" text-anchor="middle" fill="#1E1C1A" font-size="9">1</text>
+                  <circle cx="305" cy="96" r="8" fill="#E4EEF5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <text x="305" y="99" text-anchor="middle" fill="#1E1C1A" font-size="9">2</text>
+                  <circle cx="335" cy="96" r="9" fill="#B22222" stroke="#FAF7F0" stroke-width="1.5"/>
+                  <text x="335" y="99" text-anchor="middle" fill="#FAF7F0" font-size="8" font-weight="bold">3!</text>
+                </g>
+
+                <!-- Tablero Fascista (Rojo) -->
+                <g transform="translate(15, 140)">
+                  <rect x="0" y="0" width="430" height="112" rx="8" fill="#B22222" stroke="#1E1C1A" stroke-width="2.5"/>
+                  <text x="215" y="20" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-size="12" letter-spacing="2">TABLERO FASCISTA (6 LEYES PARA GANAR)</text>
+                  <!-- 6 casillas de leyes fascistas -->
+                  <rect x="16" y="30" width="58" height="68" rx="4" fill="#F8E5E5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <text x="45" y="68" text-anchor="middle" fill="#57524A" font-size="9" font-family="Oswald">1ª LEY</text>
+
+                  <rect x="84" y="30" width="58" height="68" rx="4" fill="#F8E5E5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <text x="113" y="68" text-anchor="middle" fill="#57524A" font-size="9" font-family="Oswald">2ª LEY</text>
+
+                  <rect x="152" y="30" width="58" height="68" rx="4" fill="#F8E5E5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <text x="181" y="62" text-anchor="middle" fill="#B22222" font-size="8" font-family="Oswald" font-weight="bold">3ª LEY</text>
+                  <text x="181" y="75" text-anchor="middle" fill="#1E1C1A" font-size="7" font-family="Courier Prime">ZONA HITLER</text>
+
+                  <rect x="220" y="30" width="58" height="68" rx="4" fill="#F8E5E5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <text x="249" y="62" text-anchor="middle" fill="#B22222" font-size="8" font-family="Oswald" font-weight="bold">4ª LEY</text>
+                  <text x="249" y="75" text-anchor="middle" fill="#1E1C1A" font-size="7" font-family="Courier Prime">EJECUCIÓN</text>
+
+                  <rect x="288" y="30" width="58" height="68" rx="4" fill="#F8E5E5" stroke="#1E1C1A" stroke-width="1.5"/>
+                  <text x="317" y="62" text-anchor="middle" fill="#B22222" font-size="8" font-family="Oswald" font-weight="bold">5ª LEY</text>
+                  <text x="317" y="75" text-anchor="middle" fill="#1E1C1A" font-size="7" font-family="Courier Prime">EJECUCIÓN+VETO</text>
+
+                  <rect x="356" y="30" width="58" height="68" rx="4" fill="#1E1C1A" stroke="#FAF7F0" stroke-width="2"/>
+                  <text x="385" y="68" text-anchor="middle" fill="#FAF7F0" font-size="10" font-family="Oswald" font-weight="bold">VICTORIA</text>
+                </g>
+
+                <!-- Cartas de Leyes a la derecha -->
+                <g transform="translate(468, 22)">
+                  <rect x="0" y="0" width="152" height="102" rx="8" fill="#235D8C" stroke="#1E1C1A" stroke-width="2.5"/>
+                  <rect x="10" y="10" width="132" height="82" rx="4" fill="none" stroke="#E4EEF5" stroke-width="1.5"/>
+                  <text x="76" y="48" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-weight="700" font-size="16" letter-spacing="1">LEY LIBERAL</text>
+                  <text x="76" y="68" text-anchor="middle" fill="#E4EEF5" font-family="Courier Prime, monospace" font-size="10">(6 en el mazo)</text>
+                </g>
+
+                <g transform="translate(468, 144)">
+                  <rect x="0" y="0" width="152" height="102" rx="8" fill="#B22222" stroke="#1E1C1A" stroke-width="2.5"/>
+                  <rect x="10" y="10" width="132" height="82" rx="4" fill="none" stroke="#F8E5E5" stroke-width="1.5"/>
+                  <text x="76" y="48" text-anchor="middle" fill="#FAF7F0" font-family="Oswald, sans-serif" font-weight="700" font-size="16" letter-spacing="1">LEY FASCISTA</text>
+                  <text x="76" y="68" text-anchor="middle" fill="#F8E5E5" font-family="Courier Prime, monospace" font-size="10">(11 en el mazo)</text>
+                </g>
+              </svg>
+              <figcaption class="mt-3 text-xs font-typewriter text-center text-[#57524A]">
+                Tableros de leyes (Liberal y Fascista con track de elecciones fallidas) y cartas de Ley
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 3: OBJETIVO DEL JUEGO -->
+        <section id="objetivo-del-juego" class="dossier-card rounded-xl p-6 sm:p-8 scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-[#1E1C1A] pb-3 mb-6">
+            <span class="bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold px-2.5 py-0.5 rounded text-sm">03</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase">Objetivo del juego</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Victoria Liberal -->
+            <div class="bg-[#E4EEF5] border-2 border-[#235D8C] rounded-xl p-5">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-display text-xl font-bold uppercase text-[#235D8C]">Ganan los Liberales si:</h3>
+                <span class="bg-[#235D8C] text-white text-xs font-typewriter px-2.5 py-1 rounded">BANDO AZUL</span>
+              </div>
+              <ul class="space-y-3 text-sm sm:text-base">
+                <li class="flex items-start gap-2.5">
+                  <span class="font-bold text-[#235D8C] mt-0.5">1.</span>
+                  <span>Consiguen aprobar <strong>5 leyes liberales</strong> en el tablero azul.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="font-bold text-[#235D8C] mt-0.5">2.</span>
+                  <span>Consiguen <strong>asesinar a Hitler</strong> mediante el poder presidencial de ejecución (disponible a partir de la 4ª ley fascista).</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Victoria Fascista -->
+            <div class="bg-[#F8E5E5] border-2 border-[#B22222] rounded-xl p-5">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-display text-xl font-bold uppercase text-[#B22222]">Ganan los Fascistas si:</h3>
+                <span class="bg-[#B22222] text-white text-xs font-typewriter px-2.5 py-1 rounded">BANDO ROJO</span>
+              </div>
+              <ul class="space-y-3 text-sm sm:text-base">
+                <li class="flex items-start gap-2.5">
+                  <span class="font-bold text-[#B22222] mt-0.5">1.</span>
+                  <span>Consiguen aprobar <strong>6 leyes fascistas</strong> en el tablero rojo.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="font-bold text-[#B22222] mt-0.5">2.</span>
+                  <span>Consiguen que <strong>Hitler sea elegido Canciller</strong> mediante votación una vez que ya se hayan aprobado <strong>3 o más leyes fascistas</strong>.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 4: PREPARACIÓN -->
+        <section id="preparacion" class="dossier-card rounded-xl p-6 sm:p-8 scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-[#1E1C1A] pb-3 mb-6">
+            <span class="bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold px-2.5 py-0.5 rounded text-sm">04</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase">Preparación de la partida</h2>
+          </div>
+
+          <p class="text-sm sm:text-base leading-relaxed mb-5">
+            Prepara tantos sobres como personas vayan a jugar. Cada sobre debe contener exactamente <strong>1 carta de rol secreto</strong> y <strong>1 carnet de afiliación</strong> acorde a su equipo. Selecciona abajo cuántos jugadores sois para ver el reparto exacto y los poderes del tablero:
+          </p>
+
+          <!-- Selector interactivo de jugadores -->
+          <div class="bg-[#F4EFE6] border-2 border-[#1E1C1A] rounded-xl p-5 mb-6">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <span class="font-display uppercase font-bold text-base">Selecciona el número de jugadores:</span>
+              <div class="flex flex-wrap gap-1.5" role="group" aria-label="Selector de número de jugadores">
+                <button type="button" data-players="5" class="player-btn px-3.5 py-2 rounded-lg font-display font-bold text-sm border-2 border-[#1E1C1A] bg-[#1E1C1A] text-white transition-colors">5</button>
+                <button type="button" data-players="6" class="player-btn px-3.5 py-2 rounded-lg font-display font-bold text-sm border-2 border-[#1E1C1A] bg-[#FAF7F0] text-[#1E1C1A] hover:bg-[#EAE2D3] transition-colors">6</button>
+                <button type="button" data-players="7" class="player-btn px-3.5 py-2 rounded-lg font-display font-bold text-sm border-2 border-[#1E1C1A] bg-[#FAF7F0] text-[#1E1C1A] hover:bg-[#EAE2D3] transition-colors">7</button>
+                <button type="button" data-players="8" class="player-btn px-3.5 py-2 rounded-lg font-display font-bold text-sm border-2 border-[#1E1C1A] bg-[#FAF7F0] text-[#1E1C1A] hover:bg-[#EAE2D3] transition-colors">8</button>
+                <button type="button" data-players="9" class="player-btn px-3.5 py-2 rounded-lg font-display font-bold text-sm border-2 border-[#1E1C1A] bg-[#FAF7F0] text-[#1E1C1A] hover:bg-[#EAE2D3] transition-colors">9</button>
+                <button type="button" data-players="10" class="player-btn px-3.5 py-2 rounded-lg font-display font-bold text-sm border-2 border-[#1E1C1A] bg-[#FAF7F0] text-[#1E1C1A] hover:bg-[#EAE2D3] transition-colors">10</button>
+              </div>
+            </div>
+
+            <!-- Resultado dinámico -->
+            <div id="setup-result" class="grid sm:grid-cols-3 gap-4 pt-3 border-t border-[#D6CCB8]">
+              <div class="bg-[#E4EEF5] border border-[#235D8C] rounded-lg p-3.5 text-center">
+                <div class="text-xs font-typewriter uppercase text-[#235D8C]">Liberales</div>
+                <div id="res-liberals" class="font-display text-3xl font-bold text-[#235D8C] my-1">3</div>
+                <div class="text-xs text-[#57524A]">Carnet Liberal</div>
+              </div>
+              <div class="bg-[#F8E5E5] border border-[#B22222] rounded-lg p-3.5 text-center">
+                <div class="text-xs font-typewriter uppercase text-[#B22222]">Fascistas + Hitler</div>
+                <div id="res-fascists" class="font-display text-3xl font-bold text-[#B22222] my-1">1 + Hitler</div>
+                <div class="text-xs text-[#57524A]">Carnet Fascista</div>
+              </div>
+              <div class="bg-[#FAF7F0] border border-[#D6CCB8] rounded-lg p-3.5 flex flex-col justify-center">
+                <div class="text-xs font-typewriter uppercase text-[#57524A]">Regla especial de conocimiento</div>
+                <div id="res-knowledge" class="text-xs sm:text-sm font-semibold mt-1 text-[#1E1C1A]">
+                  Hitler y el fascista SÍ se conocen entre ellos.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabla completa de referencia -->
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr class="bg-[#1E1C1A] text-[#F4EFE6] font-display uppercase tracking-wider">
+                  <th class="p-3 rounded-tl-lg">Jugadores</th>
+                  <th class="p-3">Liberales</th>
+                  <th class="p-3">Fascistas</th>
+                  <th class="p-3">Hitler</th>
+                  <th class="p-3 rounded-tr-lg">¿Hitler conoce a los fascistas?</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#D6CCB8] bg-[#F4EFE6]">
+                <tr>
+                  <td class="p-3 font-bold">5 jugadores</td>
+                  <td class="p-3 text-[#235D8C] font-semibold">3 Liberales</td>
+                  <td class="p-3 text-[#B22222] font-semibold">1 Fascista</td>
+                  <td class="p-3 font-bold">1 Hitler</td>
+                  <td class="p-3">Sí, abren los ojos juntos</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold">6 jugadores</td>
+                  <td class="p-3 text-[#235D8C] font-semibold">4 Liberales</td>
+                  <td class="p-3 text-[#B22222] font-semibold">1 Fascista</td>
+                  <td class="p-3 font-bold">1 Hitler</td>
+                  <td class="p-3">Sí, abren los ojos juntos</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold">7 jugadores</td>
+                  <td class="p-3 text-[#235D8C] font-semibold">4 Liberales</td>
+                  <td class="p-3 text-[#B22222] font-semibold">2 Fascistas</td>
+                  <td class="p-3 font-bold">1 Hitler</td>
+                  <td class="p-3">No (solo levanta el pulgar)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold">8 jugadores</td>
+                  <td class="p-3 text-[#235D8C] font-semibold">5 Liberales</td>
+                  <td class="p-3 text-[#B22222] font-semibold">2 Fascistas</td>
+                  <td class="p-3 font-bold">1 Hitler</td>
+                  <td class="p-3">No (solo levanta el pulgar)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold">9 jugadores</td>
+                  <td class="p-3 text-[#235D8C] font-semibold">5 Liberales</td>
+                  <td class="p-3 text-[#B22222] font-semibold">3 Fascistas</td>
+                  <td class="p-3 font-bold">1 Hitler</td>
+                  <td class="p-3">No (solo levanta el pulgar)</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-bold rounded-bl-lg">10 jugadores</td>
+                  <td class="p-3 text-[#235D8C] font-semibold">6 Liberales</td>
+                  <td class="p-3 text-[#B22222] font-semibold">3 Fascistas</td>
+                  <td class="p-3 font-bold">1 Hitler</td>
+                  <td class="p-3 rounded-br-lg">No (solo levanta el pulgar)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid sm:grid-cols-3 gap-4 text-sm">
+            <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-lg p-4">
+              <strong class="block font-display uppercase text-base mb-1">1. Tableros</strong>
+              Colocad en el centro el tablero fascista rojo correspondiente a vuestro número de jugadores y un tablero liberal azul.
+            </div>
+            <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-lg p-4">
+              <strong class="block font-display uppercase text-base mb-1">2. Track de elecciones</strong>
+              Situad el marcador de elecciones fallidas en la primera casilla (posición 0) del tablero azul.
+            </div>
+            <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-lg p-4">
+              <strong class="block font-display uppercase text-base mb-1">3. Mazo de leyes</strong>
+              Barajad bien las 17 cartas de ley (6 liberales y 11 fascistas) y dejad el mazo boca abajo junto al tablero.
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 5: ASIGNACIÓN Y PROTOCOLO SECRETO -->
+        <section id="asignacion-roles" class="dossier-card rounded-xl p-6 sm:p-8 scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-[#1E1C1A] pb-3 mb-6">
+            <span class="bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold px-2.5 py-0.5 rounded text-sm">05</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase">Asignación de roles y protocolo secreto</h2>
+          </div>
+
+          <p class="text-sm sm:text-base leading-relaxed mb-6">
+            Se mezclan los sobres y cada jugador toma uno al azar, mira su contenido en estricto secreto (sin mostrar reacciones) y vuelve a guardarlo. Además, cada jugador recibe una papeleta de <strong>JA! (SÍ)</strong> y otra de <strong>NEIN! (NO)</strong>.
+          </p>
+
+          <!-- Asistente interactivo de narración para la mesa -->
+          <div class="bg-[#1E1C1A] text-[#F4EFE6] rounded-xl p-5 sm:p-6 mb-6">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[#3E3A35] pb-4 mb-4">
+              <div>
+                <h3 class="font-display text-xl uppercase tracking-wide text-[#F4EFE6]">
+                  Protocolo para que los fascistas se conozcan
+                </h3>
+                <p class="text-xs sm:text-sm text-[#B8B0A2]">
+                  Todos deben guardar absoluto silencio y no hacer ruidos que delaten posiciones.
+                </p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button type="button" id="start-protocol-btn" class="bg-[#B22222] hover:bg-[#961B1B] text-white font-display uppercase text-sm px-4 py-2.5 rounded-lg transition-colors cursor-pointer">
+                  Iniciar Guía con Temporizador (10s)
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel activo del narrador (oculto hasta pulsar) -->
+            <div id="narrator-box" class="hidden bg-[#2B2824] border border-[#B8860B] rounded-lg p-4 mb-5">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <span id="narrator-step-badge" class="text-xs font-typewriter uppercase text-[#B8860B]">Paso 1 de 8</span>
+                  <p id="narrator-text" class="font-display text-lg sm:text-xl uppercase mt-1 text-white">«Cerrad los ojos.»</p>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <span id="narrator-timer" class="hidden font-typewriter text-2xl font-bold text-[#B8860B] px-3 py-1 bg-[#1E1C1A] rounded">10s</span>
+                  <button type="button" id="next-step-btn" class="bg-[#235D8C] hover:bg-[#1B496E] text-white font-display uppercase text-sm px-4 py-2 rounded-lg cursor-pointer">
+                    Siguiente paso →
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lista de los 8 pasos -->
+            <ol class="grid sm:grid-cols-2 gap-3 text-sm" id="protocol-steps-list">
+              <li data-step="1" class="protocol-step bg-[#2B2824] border border-[#3E3A35] rounded-lg p-3">
+                <strong class="text-[#B8860B] font-display">1. CERRAD LOS OJOS:</strong> Todos los jugadores cierran los ojos.
+              </li>
+              <li data-step="2" class="protocol-step bg-[#2B2824] border border-[#3E3A35] rounded-lg p-3">
+                <strong class="text-[#B8860B] font-display">2. ESTIRAD EL BRAZO:</strong> Todos extienden un brazo sobre la mesa con el puño cerrado.
+              </li>
+              <li data-step="3" class="protocol-step bg-[#2B2824] border border-[#3E3A35] rounded-lg p-3">
+                <strong class="text-[#B8860B] font-display">3. FASCISTAS (MENOS HITLER) ABRID LOS OJOS:</strong> Hitler y los liberales mantienen los ojos cerrados.
+              </li>
+              <li data-step="4" class="protocol-step bg-[#2B2824] border border-[#3E3A35] rounded-lg p-3">
+                <strong class="text-[#B8860B] font-display">4. HITLER, PULGAR ARRIBA:</strong> Hitler levanta el pulgar durante 10 segundos para ser identificado.
+              </li>
+              <li data-step="5" class="protocol-step bg-[#2B2824] border border-[#3E3A35] rounded-lg p-3">
+                <strong class="text-[#B8860B] font-display">5. HITLER, CIERRA EL PUÑO:</strong> Hitler baja el pulgar manteniendo los ojos cerrados.
+              </li>
+              <li data-step="6" class="protocol-step bg-[#2B2824] border border-[#3E3A35] rounded-lg p-3">
+                <strong class="text-[#B8860B] font-display">6. FASCISTAS, CERRAD LOS OJOS:</strong> Todos vuelven a estar con los ojos cerrados unos segundos.
+              </li>
+              <li data-step="7" class="protocol-step bg-[#2B2824] border border-[#3E3A35] rounded-lg p-3">
+                <strong class="text-[#B8860B] font-display">7. RECOGED EL BRAZO:</strong> Todos retiran su mano de la mesa a su posición normal.
+              </li>
+              <li data-step="8" class="protocol-step bg-[#2B2824] border border-[#3E3A35] rounded-lg p-3">
+                <strong class="text-[#B8860B] font-display">8. ABRID LOS OJOS:</strong> Todos abren los ojos y comienza la primera ronda.
+              </li>
+            </ol>
+
+            <div class="mt-4 bg-[#2B2824] border-l-4 border-[#235D8C] p-3 rounded-r-lg text-xs sm:text-sm text-[#E4EEF5]">
+              <strong>Variante para 5 o 6 jugadores:</strong> Como solo hay un fascista y Hitler, <strong>ambos abren los ojos a la vez</strong> en el paso 3 para reconocerse mutuamente (no es necesario levantar el pulgar).
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 6: ASÍ SE JUEGA UNA RONDA -->
+        <section id="desarrollo-ronda" class="dossier-card rounded-xl p-6 sm:p-8 scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-[#1E1C1A] pb-3 mb-6">
+            <span class="bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold px-2.5 py-0.5 rounded text-sm">06</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase">Así se juega una ronda</h2>
+          </div>
+
+          <div class="space-y-5">
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold flex items-center justify-center shrink-0 mt-0.5">1</div>
+              <div>
+                <h3 class="font-display text-lg font-bold uppercase">Candidatura presidencial</h3>
+                <p class="text-sm sm:text-base text-[#57524A] leading-relaxed">
+                  Al inicio de la partida se elige al azar al primer <strong>Presidente</strong> (en rondas sucesivas, el rótulo de Presidente pasa al jugador de la izquierda en sentido horario). El Presidente toma ambos rótulos.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold flex items-center justify-center shrink-0 mt-0.5">2</div>
+              <div>
+                <h3 class="font-display text-lg font-bold uppercase">El Presidente propone un Canciller</h3>
+                <p class="text-sm sm:text-base text-[#57524A] leading-relaxed mb-2">
+                  El Presidente elige a otro jugador para formar gobierno y le entrega el rótulo de <strong>CANCILLER</strong>. Tras debatir en la mesa, la candidatura se somete a votación.
+                </p>
+                <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-lg p-3 text-xs sm:text-sm text-[#1E1C1A]">
+                  <strong>Restricción de elegibilidad:</strong> No pueden ser propuestos como Canciller ni el <strong>último Canciller elegido</strong> ni el <strong>último Presidente</strong> que formaron gobierno (en partidas de 5 jugadores, solo queda excluido el último Canciller).
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold flex items-center justify-center shrink-0 mt-0.5">3</div>
+              <div>
+                <h3 class="font-display text-lg font-bold uppercase">Votación y recuento</h3>
+                <p class="text-sm sm:text-base text-[#57524A] leading-relaxed">
+                  Todos los jugadores (incluidos los candidatos) eligen en secreto su carta de <strong>JA! (SÍ)</strong> o <strong>NEIN! (NO)</strong> y la dejan boca abajo sobre la mesa. Cuando todos han votado, se revelan simultáneamente.
+                </p>
+              </div>
+            </div>
+
+            <!-- Resultados de la votación -->
+            <div class="grid sm:grid-cols-2 gap-4 pt-2">
+              <div class="bg-[#F8E5E5] border border-[#B22222] rounded-xl p-4">
+                <h4 class="font-display font-bold uppercase text-[#B22222] mb-1.5">Si gana el NO (o hay empate)</h4>
+                <p class="text-xs sm:text-sm leading-relaxed">
+                  El gobierno fracasa. Se avanza 1 casilla en el <strong>track de elecciones fallidas</strong> y el rótulo de Presidente pasa al siguiente jugador. Si se acumulan <strong>3 elecciones fallidas seguidas</strong>, el país entra en caos: se revela la carta superior del mazo de leyes y se promulga automáticamente (sin poder presidencial), reiniciando el track a 0.
+                </p>
+              </div>
+              <div class="bg-[#E4EEF5] border border-[#235D8C] rounded-xl p-4">
+                <h4 class="font-display font-bold uppercase text-[#235D8C] mb-1.5">Si gana el SÍ (mayoría absoluta)</h4>
+                <p class="text-xs sm:text-sm leading-relaxed">
+                  Se forma el gobierno. El track de elecciones fallidas vuelve a 0. <em>Atención:</em> Si ya hay <strong>3 o más leyes fascistas</strong> aprobadas, el Canciller recién elegido debe declarar públicamente si es Hitler; si lo es, los fascistas ganan de inmediato. De lo contrario, comienza la sesión legislativa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 7: APROBACIÓN DE UNA LEY Y PODERES -->
+        <section id="aprobacion-ley" class="dossier-card rounded-xl p-6 sm:p-8 scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-[#1E1C1A] pb-3 mb-6">
+            <span class="bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold px-2.5 py-0.5 rounded text-sm">07</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase">Aprobación de una ley y poderes</h2>
+          </div>
+
+          <!-- Flujo visual de 3 -> 2 -> 1 cartas -->
+          <div class="grid sm:grid-cols-3 gap-4 mb-6">
+            <div class="bg-[#F4EFE6] border-2 border-[#1E1C1A] rounded-xl p-4 text-center">
+              <div class="font-display text-3xl font-bold text-[#1E1C1A] mb-1">3 Cartas</div>
+              <div class="text-xs font-typewriter uppercase text-[#B22222] mb-2">Turno del Presidente</div>
+              <p class="text-xs sm:text-sm text-[#57524A]">
+                El Presidente roba en secreto las <strong>3 primeras cartas</strong> del mazo de leyes, mira su contenido, descarta <strong>1 boca abajo</strong> y entrega las 2 restantes al Canciller.
+              </p>
+            </div>
+            <div class="bg-[#F4EFE6] border-2 border-[#1E1C1A] rounded-xl p-4 text-center">
+              <div class="font-display text-3xl font-bold text-[#1E1C1A] mb-1">2 Cartas</div>
+              <div class="text-xs font-typewriter uppercase text-[#235D8C] mb-2">Turno del Canciller</div>
+              <p class="text-xs sm:text-sm text-[#57524A]">
+                El Canciller mira en secreto las <strong>2 cartas recibidas</strong>, descarta <strong>1 boca abajo</strong> y coloca la carta restante boca arriba en su tablero correspondiente.
+              </p>
+            </div>
+            <div class="bg-[#F4EFE6] border-2 border-[#1E1C1A] rounded-xl p-4 text-center">
+              <div class="font-display text-3xl font-bold text-[#B8860B] mb-1">1 Ley</div>
+              <div class="text-xs font-typewriter uppercase text-[#1E1C1A] mb-2">Promulgación</div>
+              <p class="text-xs sm:text-sm text-[#57524A]">
+                Durante este proceso <strong>no se pueden intercambiar señales ni palabras</strong> hasta que la ley quede colocada. Si quedan menos de 3 cartas en el mazo, se barajan los descartes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Poderes ejecutivos del tablero fascista -->
+          <div class="border-t border-[#D6CCB8] pt-6">
+            <h3 class="font-display text-xl font-bold uppercase text-[#B22222] mb-2">
+              Poderes presidenciales (al aprobar una ley fascista)
+            </h3>
+            <p class="text-sm text-[#57524A] mb-4">
+              Si la ley promulgada es <strong>liberal</strong>, no ocurre ningún efecto adicional y termina la ronda. Si es <strong>fascista</strong> y ocupa una casilla con icono de poder en el tablero rojo, el Presidente actual debe ejercer ese poder ejecutivo de inmediato:
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4 text-sm">
+              <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-lg p-4">
+                <strong class="font-display uppercase text-base block text-[#1E1C1A] mb-1">🔍 Investigar lealtad</strong>
+                El Presidente elige a un jugador que no haya sido investigado antes y mira en secreto su <strong>carnet de afiliación</strong> (Liberal o Fascista). Luego puede decir la verdad o mentir a la mesa.
+              </div>
+              <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-lg p-4">
+                <strong class="font-display uppercase text-base block text-[#1E1C1A] mb-1">👁️ Examen legislativo</strong>
+                El Presidente mira en secreto las <strong>3 primeras cartas</strong> del mazo de robo sin alterar su orden y las vuelve a dejar en su sitio.
+              </div>
+              <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-lg p-4">
+                <strong class="font-display uppercase text-base block text-[#1E1C1A] mb-1">🗳️ Elección especial</strong>
+                El Presidente elige a cualquier otro jugador para que sea el <strong>próximo Presidente</strong> en la siguiente ronda (después de esa ronda, el turno vuelve a su orden normal).
+              </div>
+              <div class="bg-[#F4EFE6] border border-[#D6CCB8] rounded-lg p-4">
+                <strong class="font-display uppercase text-base block text-[#B22222] mb-1">🔫 Ejecución (4ª y 5ª ley)</strong>
+                El Presidente ejecuta a un jugador, que queda eliminado de la partida y no puede hablar ni votar. Si el jugador ejecutado era <strong>Hitler</strong>, revela su carta y ganan los Liberales al instante.
+              </div>
+            </div>
+
+            <div class="mt-4 bg-[#EAE2D3] border border-[#1E1C1A] rounded-lg p-4 text-xs sm:text-sm">
+              <strong>Derecho de Veto (tras la 5ª ley fascista):</strong> Cuando hay 5 leyes fascistas en el tablero, el Canciller, tras ver sus 2 cartas, puede pedir <em>vetar la agenda</em>. Si el Presidente acepta, ambas cartas se descartan sin promulgar ley y avanza 1 casilla el track de elecciones fallidas.
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 8: FIN DE LA PARTIDA -->
+        <section id="fin-partida" class="dossier-card rounded-xl p-6 sm:p-8 scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-[#1E1C1A] pb-3 mb-6">
+            <span class="bg-[#1E1C1A] text-[#F4EFE6] font-display font-bold px-2.5 py-0.5 rounded text-sm">08</span>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase">Fin de la partida. ¿Quién ha ganado?</h2>
+          </div>
+
+          <p class="text-sm sm:text-base leading-relaxed mb-5">
+            La partida concluye inmediatamente en el instante en que se cumple cualquiera de estas cuatro condiciones:
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="border-l-4 border-[#235D8C] bg-[#F4EFE6] p-4 rounded-r-lg">
+              <div class="font-display font-bold uppercase text-[#235D8C]">Victoria Liberal por leyes</div>
+              <p class="text-sm text-[#57524A] mt-1">Se promulga la <strong>5ª ley liberal</strong> en el tablero azul.</p>
+            </div>
+            <div class="border-l-4 border-[#235D8C] bg-[#F4EFE6] p-4 rounded-r-lg">
+              <div class="font-display font-bold uppercase text-[#235D8C]">Victoria Liberal por ejecución</div>
+              <p class="text-sm text-[#57524A] mt-1">El Presidente ejecuta al jugador que posee la carta de <strong>Hitler</strong>.</p>
+            </div>
+            <div class="border-l-4 border-[#B22222] bg-[#F4EFE6] p-4 rounded-r-lg">
+              <div class="font-display font-bold uppercase text-[#B22222]">Victoria Fascista por leyes</div>
+              <p class="text-sm text-[#57524A] mt-1">Se promulga la <strong>6ª ley fascista</strong> en el tablero rojo.</p>
+            </div>
+            <div class="border-l-4 border-[#B22222] bg-[#F4EFE6] p-4 rounded-r-lg">
+              <div class="font-display font-bold uppercase text-[#B22222]">Victoria Fascista política</div>
+              <p class="text-sm text-[#57524A] mt-1"><strong>Hitler es elegido Canciller</strong> tras haberse aprobado al menos <strong>3 leyes fascistas</strong>.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Pie de página minimalista -->
+  <footer class="border-t-2 border-[#D6CCB8] bg-[#EAE2D3] py-6 px-4 text-center text-xs font-typewriter text-[#57524A]">
+    Guía de instrucciones y reglas de «Secret Hitler» • Edición de referencia para mesa
+  </footer>
+
+  <script>
+    // 1. Selector interactivo de número de jugadores (5 a 10)
+    const setupData = {
+      5: { liberals: '3', fascists: '1 + Hitler', knowledge: 'Hitler y el fascista SÍ abren los ojos juntos y se conocen.' },
+      6: { liberals: '4', fascists: '1 + Hitler', knowledge: 'Hitler y el fascista SÍ abren los ojos juntos y se conocen.' },
+      7: { liberals: '4', fascists: '2 + Hitler', knowledge: 'Hitler NO abre los ojos (solo levanta el pulgar); los 2 fascistas sí le ven.' },
+      8: { liberals: '5', fascists: '2 + Hitler', knowledge: 'Hitler NO abre los ojos (solo levanta el pulgar); los 2 fascistas sí le ven.' },
+      9: { liberals: '5', fascists: '3 + Hitler', knowledge: 'Hitler NO abre los ojos (solo levanta el pulgar); los 3 fascistas sí le ven.' },
+      10: { liberals: '6', fascists: '3 + Hitler', knowledge: 'Hitler NO abre los ojos (solo levanta el pulgar); los 3 fascistas sí le ven.' }
+    };
+
+    const playerButtons = document.querySelectorAll('.player-btn');
+    const resLiberals = document.getElementById('res-liberals');
+    const resFascists = document.getElementById('res-fascists');
+    const resKnowledge = document.getElementById('res-knowledge');
+
+    playerButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const count = btn.getAttribute('data-players');
+        const info = setupData[count];
+
+        // Actualizar estilos de botones
+        playerButtons.forEach(b => {
+          b.classList.remove('bg-[#1E1C1A]', 'text-white');
+          b.classList.add('bg-[#FAF7F0]', 'text-[#1E1C1A]');
+        });
+        btn.classList.remove('bg-[#FAF7F0]', 'text-[#1E1C1A]');
+        btn.classList.add('bg-[#1E1C1A]', 'text-white');
+
+        // Actualizar datos
+        resLiberals.textContent = info.liberals;
+        resFascists.textContent = info.fascists;
+        resKnowledge.textContent = info.knowledge;
+      });
+    });
+
+    // 2. Narrador interactivo con temporizador de 10 segundos para el protocolo secreto
+    const protocolScripts = [
+      "«Cerrad todos los ojos.»",
+      "«Estirad todos el brazo sobre la mesa con el puño cerrado.»",
+      "«Los fascistas, MENOS Hitler, abrid los ojos. (En partidas de 5-6 jugadores, Hitler también abre los ojos).»",
+      "«Hitler, levanta el pulgar hacia arriba para que tus compañeros te identifiquen.»",
+      "«Hitler, cierra el puño y baja el pulgar.»",
+      "«Fascistas, cerrad los ojos. Todos con los ojos cerrados.»",
+      "«Recoged todos el brazo a vuestra posición normal.»",
+      "«Abrid todos los ojos. ¡Comienza la partida!»"
+    ];
+
+    let currentStep = 0;
+    let timerInterval = null;
+
+    const startProtocolBtn = document.getElementById('start-protocol-btn');
+    const narratorBox = document.getElementById('narrator-box');
+    const narratorStepBadge = document.getElementById('narrator-step-badge');
+    const narratorText = document.getElementById('narrator-text');
+    const narratorTimer = document.getElementById('narrator-timer');
+    const nextStepBtn = document.getElementById('next-step-btn');
+    const stepCards = document.querySelectorAll('.protocol-step');
+
+    function updateProtocolStep(stepIndex) {
+      clearInterval(timerInterval);
+      narratorTimer.classList.add('hidden');
+
+      if (stepIndex >= protocolScripts.length) {
+        narratorBox.classList.add('hidden');
+        stepCards.forEach(card => card.classList.remove('ring-2', 'ring-[#B8860B]'));
+        startProtocolBtn.textContent = 'Reiniciar Guía con Temporizador (10s)';
+        return;
+      }
+
+      currentStep = stepIndex;
+      narratorBox.classList.remove('hidden');
+      narratorStepBadge.textContent = `Paso ${currentStep + 1} de 8`;
+      narratorText.textContent = protocolScripts[currentStep];
+      nextStepBtn.textContent = currentStep === 7 ? 'Finalizar ✓' : 'Siguiente paso →';
+
+      // Resaltar tarjeta correspondiente
+      stepCards.forEach((card, idx) => {
+        if (idx === currentStep) {
+          card.classList.add('ring-2', 'ring-[#B8860B]');
+        } else {
+          card.classList.remove('ring-2', 'ring-[#B8860B]');
+        }
+      });
+
+      // Activar cuenta atrás de 10s en el paso 4 (índice 3)
+      if (currentStep === 3) {
+        let secondsLeft = 10;
+        narratorTimer.textContent = `${secondsLeft}s`;
+        narratorTimer.classList.remove('hidden');
+
+        timerInterval = setInterval(() => {
+          secondsLeft--;
+          if (secondsLeft > 0) {
+            narratorTimer.textContent = `${secondsLeft}s`;
+          } else {
+            clearInterval(timerInterval);
+            narratorTimer.textContent = '¡Listo!';
+          }
+        }, 1000);
+      }
+    }
+
+    startProtocolBtn.addEventListener('click', () => {
+      updateProtocolStep(0);
+    });
+
+    nextStepBtn.addEventListener('click', () => {
+      updateProtocolStep(currentStep + 1);
+    });
+
+    // 3. Resaltado activo en el índice al hacer scroll
+    const sections = document.querySelectorAll('main section[id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          currentId = section.getAttribute('id');
+        }
+      });
+
+      tocLinks.forEach(link => {
+        link.classList.remove('bg-[#1E1C1A]', 'text-[#F4EFE6]');
+        link.classList.add('text-[#57524A]');
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.remove('text-[#57524A]');
+          link.classList.add('bg-[#1E1C1A]', 'text-[#F4EFE6]');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
